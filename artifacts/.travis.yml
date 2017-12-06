@@ -3,8 +3,8 @@
 - mkdir artifacts && cd artifacts
 - echo "text1 text2 text3" | ../_install/bin/demo
 - test -f default.log 
-- mkdir /Users/Roman/.config
-- echo "output=config.log" > /Users/Roman/.config/demo.cfg
+- mkdir /home/roman/.config
+- echo "output=config.log" > /home/roman/.config/demo.cfg
 - echo "text1 text2 text3" | ../_install/bin/demo
 - test -f config.log 
 - export DEMO_OUTPUT=env.log
