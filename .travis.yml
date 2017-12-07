@@ -3,11 +3,11 @@ language: cpp
 script:   
 - cmake -H. -B_build -DCMAKE_INSTALL_PREFIX=_install
 - cmake --build _build --target install
-- mkdir artifacts && cd artifacts
+- cd artifacts
 - echo "text1 text2 text3" | ../_install/bin/demo
 - test -f default.log 
-- mkdir /home/roman/.config
-- echo "output=config.log" > /home/roman/.config/demo.cfg
+- mkdir .config
+- echo "output=config.log" > .config/demo.cfg
 - echo "text1 text2 text3" | ../_install/bin/demo
 - test -f config.log 
 - export DEMO_OUTPUT=env.log
